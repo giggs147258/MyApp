@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="80sp"
+        android:layout_marginTop="100sp"
+        android:background="@drawable/user" />
+
+    <EditText
+        android:background="@drawable/edittext"
+        android:textColor="#000000"
+        android:textColorHint="#fff"
+        android:id="@+id/editTextUser"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="170sp"
+        android:layout_marginTop="100sp"
+        android:hint="username"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/pass"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="80sp"
+        android:layout_marginTop="200sp"
+        android:background="@drawable/password" />
+
+    <EditText
+        android:background="@drawable/edittext"
+        android:textColor="#000000"
+        android:textColorHint="#fff"
+        android:id="@+id/editTextPass"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="170sp"
+        android:layout_marginTop="200sp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:id="@+id/buttonLogin"
+        android:background="@drawable/login"
+        android:layout_width="150sp"
+        android:layout_height="40sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="320sp" />
+
+    <ImageButton
+        android:id="@+id/buttonRegis"
+        android:background="@drawable/register"
+        android:layout_width="150sp"
+        android:layout_height="80sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="430sp" />
+
+</FrameLayout>

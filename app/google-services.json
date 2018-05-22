@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "634622270032",
+    "firebase_url": "https://kornchrismas.firebaseio.com",
+    "project_id": "kornchrismas",
+    "storage_bucket": "kornchrismas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634622270032:android:cfffb71e1d829bc2",
+        "android_client_info": {
+          "package_name": "com.example.kornchrismas.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634622270032-dhp24jsp2u85ojdo8kmgu9q07m5g22om.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kornchrismas.myapp",
+            "certificate_hash": "cf9a0c9990c2f987807ae90967005ecf36f6eee7"
+          }
+        },
+        {
+          "client_id": "634622270032-voibo0j9opictms3hgls6kki2db32gb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1AZV1GZ9yCJiHDBb1vhFcitHErEfcxO4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634622270032-voibo0j9opictms3hgls6kki2db32gb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
