@@ -18,12 +18,12 @@
         android:background="@drawable/edittext"
         android:textColor="#000000"
         android:textColorHint="#fff"
-        android:id="@+id/editTextUser"
+        android:id="@+id/editTextEmail"
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_marginLeft="170sp"
         android:layout_marginTop="100sp"
-        android:hint="username"
+        android:hint="email"
         android:textAlignment="center" />
 
     <ImageView
@@ -51,6 +51,7 @@
     <ImageButton
         android:id="@+id/buttonLogin"
         android:background="@drawable/login"
+        android:onClick="Login"
         android:layout_width="150sp"
         android:layout_height="40sp"
         android:layout_gravity="center_horizontal"

@@ -20,7 +20,7 @@ public class AnswerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_answer);
 
         again = (Button) findViewById(R.id.buttonAgain);
-        back = (ImageButton) findViewById(R.id.buttonBack);
+        back = (ImageButton) findViewById(R.id.butBack);
         score = (TextView) findViewById(R.id.textScore);
 
 

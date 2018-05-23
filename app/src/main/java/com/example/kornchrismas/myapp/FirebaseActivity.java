@@ -33,7 +33,7 @@ public class FirebaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase);
 
-        back = (ImageButton) findViewById(R.id.buttonBack);
+        back = (ImageButton) findViewById(R.id.btnBack);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
 

@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton back,game,firebase;
-    private TextView user;
+    private TextView email;
     private MediaPlayer musicBg,soundBt;
 
     @Override
@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        user = (TextView) findViewById(R.id.textViewUser);
+        email = (TextView) findViewById(R.id.textViewUser);
         back = (ImageButton) findViewById(R.id.buttonBack);
         game = (ImageButton) findViewById(R.id.buttonGame);
         firebase = (ImageButton) findViewById(R.id.buttonFirebase);
@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         musicBg.start();
         musicBg.setLooping(true);
 
-        user.setText(getIntent().getStringExtra("name"));
+        email.setText(getIntent().getExtras().getString("Email"));
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
