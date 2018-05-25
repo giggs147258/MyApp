@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,10 +24,11 @@ public class FirebaseActivity extends AppCompatActivity {
     public DatabaseReference databaseReference,databaseReference2,text;
 
     private static final String TAG = "LED Control";
-    public Button Switch,Switch2;
-    public Integer Value,Value_refer,Value2,Value_refer2;
+    private Button Switch,Switch2;
+    private Integer Value,Value_refer,Value2,Value_refer2;
     private TextView textView;
     private ImageButton back;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,13 @@ public class FirebaseActivity extends AppCompatActivity {
         back = (ImageButton) findViewById(R.id.btnBack);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         /*------------------------------ LED1 ---------------------------------------*/
-        databaseReference = firebaseDatabase.getReference("Switch/LED1");
+        databaseReference = firebaseDatabase.getReference("LED1");
 
         Switch = (Button) findViewById(R.id.led1);
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -70,7 +74,7 @@ public class FirebaseActivity extends AppCompatActivity {
         });
 
         /*------------------------------ LED2 ---------------------------------------*/
-        databaseReference2 = firebaseDatabase.getReference("Switch/LED2");
+        databaseReference2 = firebaseDatabase.getReference("LED2");
 
         Switch2 = (Button) findViewById(R.id.led2);
         databaseReference2.addValueEventListener(new ValueEventListener() {
@@ -122,6 +126,7 @@ public class FirebaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirebaseActivity.this, LoginActivity.class);
+                intent.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
                 startActivity(intent);
             }
         });

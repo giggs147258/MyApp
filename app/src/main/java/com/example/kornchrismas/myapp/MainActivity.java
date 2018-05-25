@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Login (View view) {
+        String strEmail = email.getText().toString();
+        String strPass = pass.getText().toString();
+        if(TextUtils.isEmpty(strEmail)) {
+            Toast.makeText(this, "Please Enter Your Email.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(TextUtils.isEmpty(strPass)) {
+            Toast.makeText(this, "Please Enter Your Password.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         final ProgressDialog progressDialog = ProgressDialog.show(MainActivity.this,"Please wait...","Processing...",true);
         (firebaseAuth.signInWithEmailAndPassword(email.getText().toString(),pass.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -66,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
                             intent.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
                             startActivity(intent);
                             musicBg.stop();
-                        } else {
+                        }
+                        else {
                             Log.e("ERROR", task.getException().toString());
                             Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
