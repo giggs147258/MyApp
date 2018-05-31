@@ -112,7 +112,7 @@ public class FirebaseActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Map map = (Map) dataSnapshot.getValue();
-                String index = String.valueOf(map.get("index"));
+                String index = String.valueOf(map.get("SensorGas"));
                 textView.setText(index);
             }
 

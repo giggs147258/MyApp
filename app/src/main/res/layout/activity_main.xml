@@ -10,7 +10,7 @@
         android:id="@+id/user"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_marginLeft="80sp"
+        android:layout_marginLeft="70sp"
         android:layout_marginTop="100sp"
         android:background="@drawable/user" />
 
@@ -19,9 +19,9 @@
         android:textColor="#000000"
         android:textColorHint="#fff"
         android:id="@+id/editTextEmail"
-        android:layout_width="150sp"
+        android:layout_width="200sp"
         android:layout_height="50sp"
-        android:layout_marginLeft="170sp"
+        android:layout_marginLeft="130sp"
         android:layout_marginTop="100sp"
         android:hint="email"
         android:textAlignment="center" />
@@ -30,7 +30,7 @@
         android:id="@+id/pass"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_marginLeft="80sp"
+        android:layout_marginLeft="70sp"
         android:layout_marginTop="200sp"
         android:background="@drawable/password" />
 
@@ -39,9 +39,9 @@
         android:textColor="#000000"
         android:textColorHint="#fff"
         android:id="@+id/editTextPass"
-        android:layout_width="150sp"
+        android:layout_width="200sp"
         android:layout_height="50sp"
-        android:layout_marginLeft="170sp"
+        android:layout_marginLeft="130sp"
         android:layout_marginTop="200sp"
         android:ems="10"
         android:inputType="textPassword"
